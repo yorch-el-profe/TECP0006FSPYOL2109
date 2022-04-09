@@ -23,3 +23,15 @@ Fizz (12)
 14
 FizzBuzz (15)
 """
+mensaje = ""
+
+for i in range(1, 101):
+  if (i%3==0):
+    mensaje = "Fizz"
+      
+  if (i%5==0):
+    mensaje = mensaje + "Buzz "
+
+  mensaje = mensaje + " ({})".format(i)
+  print(mensaje)
+  mensaje = ""
