@@ -1,5 +1,7 @@
 from fibonacci_error import FibonacciError
+from memoize import *
 
+@memoize
 def fibonacci(n):
   if n == 1 or n == 2:
     return 1
