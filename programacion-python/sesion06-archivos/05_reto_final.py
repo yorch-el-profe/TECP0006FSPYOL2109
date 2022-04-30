@@ -2,6 +2,8 @@ import csv
 import sqlite3
 from sqlite3 import Error as SQLiteError
 
+# Solución de Gerardo Garcia
+
 """
 Objetivo:
 Leer el archivo inventario.csv e insertarlo en una base de datos SQLite.
