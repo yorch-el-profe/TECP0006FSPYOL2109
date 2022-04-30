@@ -12,3 +12,55 @@ maquina = MaquinaExpendedora()
 maquina.comprar("Pepsi", 100) -> 85 (y quita el refresco de la máquina)
 maquina.revisar() -> Lista de los refrescos que hay
 """
+class Refresco:
+  def __init__(self, nombre, precio):
+    self.nombre = nombre
+    self.precio = precio
+
+  def __str__(self):
+    return "{} - ${}".format(self.nombre, self.precio)
+
+  def __eq__(self, refresco):
+    return self.nombre == refresco.nombre
+
+
+class MaquinaExpendedora:
+
+  def __init__(self):
+    self.__refrescos = [
+      Refresco("Coca Cola 600ml", 15),
+      Refresco("Topochico 500ml", 14),
+      Refresco("Pepsi 400ml", 13),
+      Refresco("Coca Cola 600ml", 15),
+      Refresco("Coca Cola 250ml", 10)
+    ]
+
+  def ver_refrescos(self):
+    print("Lista de refrescos:")
+    for refresco in self.__refrescos:
+      print(refresco)
+
+  def comprar(self, nombre):
+    for i in range(0, len(self.__refrescos)):
+      if nombre == self.__refrescos[i].nombre:
+        return self.__refrescos.pop(i)
+    
+    return "No encontrado"
+
+maquina = MaquinaExpendedora()
+maquina.ver_refrescos()
+
+print("\n")
+
+compra = maquina.comprar("Coca Cola 600ml")
+print(compra)
+
+compra = maquina.comprar("Pepsi 400ml")
+print(compra)
+
+compra = maquina.comprar("Fanta 1lt")
+print(compra)
+
+print("\n")
+
+maquina.ver_refrescos()

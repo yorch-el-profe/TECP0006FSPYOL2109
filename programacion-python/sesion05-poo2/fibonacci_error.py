@@ -1,0 +1,2 @@
+class FibonacciError(Exception):
+  pass
