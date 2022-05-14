@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"/>
+  </head>
+  <body>
+    <div class="container">
+      <form method="POST">
+        <div class="mb-3">
+          <label class="form-label">Operación</label>
+          <select class="form-select" name="operacion">
+            <option value="1">Suma</option>
+            <option value="2">Resta</option>
+            <option value="3">Multiplicación</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="primer_numero" class="form-label">Primer número</label>
+          <input type="number" class="form-control" id="primer_numero" name="primer_numero" value="0"/>
+        </div>
+        <div class="mb-3">
+          <label for="segundo_numero" class="form-label">Segundo número</label>
+          <input type="number" class="form-control" id="segundo_numero" name="segundo_numero" value="0"/>
+        </div>
+        <button type="submit" class="btn btn-primary">Calcular</button>
+      </form>
+
+      <h5>{{mensaje}}</h5>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
