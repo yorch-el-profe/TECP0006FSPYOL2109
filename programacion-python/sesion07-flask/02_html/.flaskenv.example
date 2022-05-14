@@ -1,0 +1,2 @@
+# Variable que especifica el entorno de ejecución (development o production)
+FLASK_APP=
